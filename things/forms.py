@@ -7,7 +7,7 @@ from .models import Thing
 
 
 class ThingForm(forms.ModelForm):
-    description = forms.CharField(widget=forms.Textarea)
+    description = forms.CharField(widget=forms.Textarea(attrs={'maxlength': '120'}))
     quantity = forms.IntegerField(widget=forms.NumberInput)
 
     class Meta:
